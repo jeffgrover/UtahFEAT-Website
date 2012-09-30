@@ -12,7 +12,7 @@ GetCategoryData = function () {
     $.ajax({
         type: "get",
         url: "https://api.mongohq.com/databases/UtahFEAT/collections/categories/documents",
-        data: "_apikey=413nehy2f5ouke719vdv&sort={%22name%22:1}",
+        data: "sort={%22name%22:1}",
         cache: false,
         datatype: "json",
         error: function (a, b, c) {
@@ -50,7 +50,7 @@ GetProviderData = function () {
     $.ajax({
         type: "get",
         url: "https://api.mongohq.com/databases/UtahFEAT/collections/providers/documents",
-        data: "_apikey=413nehy2f5ouke719vdv" + a + "&sort={%22name%22:1}&limit=100&skip=" + ProviderRecordsDisplayed,
+        data: a + "&sort={%22name%22:1}&limit=100&skip=" + ProviderRecordsDisplayed,
         cache: false,
         dataType: "json",
         error: function (a, b, c) {
